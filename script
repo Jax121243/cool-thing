@@ -1,0 +1,91 @@
+import time
+import random
+import tkinter as tk
+from tkinter import *
+root= Tk()
+def y():
+    root.destroy()
+def n():
+    print("Cancelled.")
+    exit()
+confirm=tk.Label(text="Bypassing bank security comes with great risks. Would you like to continue?")
+confirm.pack(side=tk.TOP, expand=True)
+framea=tk.Frame()
+framea.pack(fill=tk.X, side=tk.RIGHT, expand=True)
+No = tk.Button(
+    text="No",
+    width=15,
+    height=5,
+    bg="red",
+    fg="white",
+    command=n
+)
+No.pack(fill=tk.X, side=tk.RIGHT, expand=True)
+Yes = tk.Button(
+    master=framea,
+    text="Yes",
+    width=15,
+    height=5,
+    bg="green",
+    fg="white",
+    command=y
+)
+Yes.pack(fill=tk.X, side=tk.RIGHT, expand=True)
+root.mainloop()
+def randint(a, b):
+    return round(random.uniform(a, b), 2)
+num=0
+symbol="%"
+print("Getting Malware Ready for Injection into Bank Security...")
+for i in range(0,4):
+    time.sleep(0.7)
+    print(".")
+time.sleep(0.7)
+print("Bypassing Bank Security via Backdoor...")
+time.sleep(0.7)
+for i in range(0,100):
+    num+=1
+    print(str(num)+symbol)
+    time.sleep(randint(0.05, 0.4))
+time.sleep(0.7)
+print("Retrieving Bank Information...")
+for i in range(0,4):
+    time.sleep(0.7)
+    print(".")
+time.sleep(0.7)
+first=["Morgan ","James ","Viola ","Noah ","Elijah ","Jackson ","Jaxson ","Ava ","Sophia ","Charlotte ","William ","Will ","Lucas ","Henry ","Benjamin ","Ben ","Avery ","Abigail ","Luna ","Emily ","Elizabeth ","Eliza "]
+last=["Williams","Miller","Rodriguez","Lewis","Wilson","Hill","Scott","Wright","Flores","Hall","Carter","Wollaston","Phillips","Collins","Parker","Evans","Edwards","Peterson","Reed","Chan","Richardson"]
+credfirst=random.choice(first)
+credlast=random.choice(last)
+print("Credit Card Holder = "+credfirst+credlast)
+credcard1=random.randint(1000,9999)
+credcard2=random.randint(1000,9999)
+credcard3=random.randint(1000,9999)
+credcard4=random.randint(1000,9999)
+s=" "
+for i in range(0,4):
+    time.sleep(0.7)
+    print(".")
+time.sleep(0.7)
+print("Credit Card Number = "+str(credcard1)+s+str(credcard2)+s+str(credcard3)+s+str(credcard4))
+for i in range(0,4):
+    time.sleep(0.7)
+    print(".")
+time.sleep(0.7)
+CVV=random.randint(100,999)
+print("CVV = "+str(CVV))
+time.sleep(0.7)
+print("Removing evidence...")
+time.sleep(0.7)
+num=0
+for i in range(0,100):
+    num+=1
+    print(str(num)+symbol)
+    time.sleep(randint(0.01, 0.25))
+time.sleep(0.7)
+print("Finishing things up...")
+for i in range(0,4):
+    time.sleep(0.7)
+    print(".")
+time.sleep(0.7)
+print("Process Complete.")
